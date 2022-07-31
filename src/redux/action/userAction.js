@@ -12,6 +12,7 @@ export const confirmLogin = (user) => {
 }
 
 export const KeepLogin = (token) => {
+    console.log(token);
     return (dispatch) => {
         var options = {
             headers: {
@@ -19,7 +20,7 @@ export const KeepLogin = (token) => {
             }
         }
 
-        axios.post(API_URL_1 + '/user/keepsign', null, options)
+        axios.post(API_URL_1 + '/staff/keeplogin', null, options)
             .then(res => {
                 console.log(res.data)
                 dispatch({
@@ -28,7 +29,7 @@ export const KeepLogin = (token) => {
                 })
             }).catch(err => {
                 localStorage.removeItem('ptoken')
-                // console.log(err.response.data)
+                console.log(err.response.data)
                 dispatch({
                     type: LOGOUT_USER
                 })
