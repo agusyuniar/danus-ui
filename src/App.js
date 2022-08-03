@@ -7,6 +7,7 @@ import Homepage from './pages/home';
 import ProfilStaff from './pages/profileStaff';
 import { connect } from 'react-redux';
 import { KeepLogin } from "./redux/action";
+import RegisterStaff from './pages/registerPage';
 
 class App extends Component {
 
@@ -23,6 +24,7 @@ class App extends Component {
         {/* <IndexRoute component = {Homepage} /> */}
           <Route path='/' element={<Homepage/>} />
           <Route path='/StProfile' element={<ProfilStaff/>}/>
+          <Route path='/register' element={<RegisterStaff/>}/>
         </Routes>        
       </BrowserRouter>
     );

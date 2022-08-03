@@ -58,8 +58,9 @@ class LoginPage extends Component {
                         variant="contained"
                         onClick={this.onBtnLogin}
                     >
-                        Contained</Button>
+                        Login</Button>
                     </div>
+                    belum ada akun? <a href='/register'>Daftar</a>
                 </div>
             </div>
         );
